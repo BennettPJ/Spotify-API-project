@@ -1,7 +1,6 @@
 import argparse 
 import requests 
 import logging
-from spotipy.oauth2 import SpotifyOAuth
 
 BASE_URL = "https://api.spotify.com/v1" #The base URL for all the APi calls
 
