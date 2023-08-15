@@ -6,7 +6,7 @@ This project is to save all of the songs every week from the discover weekly pla
 
 Setup instructions:
 
-(Step 1) The user needs to create an app on the spotify developer dashboard. spotify developer dashboard: https://developer.spotify.com
+(Step 1) The user needs to create an app on the spotify developer dashboard. Spotify developer dashboard: https://developer.spotify.com
 
 (Step 2) The user needs to run the "auth.py" script. All of the arguments required come from the app the user created on the developer dashboard.
 
