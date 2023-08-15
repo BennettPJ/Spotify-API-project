@@ -1,27 +1,9 @@
 import argparse 
 import requests 
 import logging
-import spotipy
 from spotipy.oauth2 import SpotifyOAuth
-import json
 
 BASE_URL = "https://api.spotify.com/v1" #The base URL for all the APi calls
-
-
-def authorize(client_id, client_secret):
-    redirect_uri = 'https://example.org/callback'
-    scope = "user-library-read playlist-read-private playlist-modify-public playlist-modify-private" #all of the authorization scopes we need
-    sp_oauth = SpotifyOAuth(client_id, client_secret, redirect_uri, scope=scope)
-
-    #auth_url = sp_oauth.get_authorize_url()
-    #print(f"Please authorize the application by clicking the following link:\n{auth_url}")
-    
-    redirected_url = ""
-    code = sp_oauth.parse_response_code(redirected_url)
-    token = sp_oauth.get_access_token(code)
-
-    return token['access_token']
-
 
 def get_user_id(header):
     response = requests.get(
@@ -41,6 +23,7 @@ def get_saved_playlist(header, user_id):
     playlists = response.json().get('items')#gets a list of playlist items (dict format)
 
     return playlists
+
 
 def get_source_tracks(playlist):
     playlist_id = playlist['id'] #gets ID of our discover weekly playlist so it can be used in the next API call
