@@ -11,9 +11,9 @@ jobs:
 
         steps:
         - name: setup python
-          uses: actions/setup-python@v4
+          uses: actions/setup-python@v2
           with:
-            python-version: '3.10' #Uses python 3.10 for this workflow
+            python-version: '3.9' #Uses python 3.10 for this workflow
         #This sets up python on our machine
 
         - name: install python packages #This will install all of our dependancies
