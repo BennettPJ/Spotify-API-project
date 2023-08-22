@@ -18,7 +18,8 @@ jobs:
 
         - name: install python packages #This will install all of our dependancies
           run: | 
-            pip install requests
+            python -m pip install --upgrade pip
+            python -m pip install requests
         #This will upgrade our pip and install our only dependancy which is the requests library
 
         - name: Run weekly_adder.py
