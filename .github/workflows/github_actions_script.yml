@@ -18,7 +18,6 @@ jobs:
 
         - name: install python packages #This will install all of our dependancies
           run: | 
-            pyhton -m pip install --upgrade pip
             pip install requests
         #This will upgrade our pip and install our only dependancy which is the requests library
 
